@@ -1,15 +1,25 @@
 package domain;
 
 public class Creature {
+    private int id;
     private int positionX;
     private int positionY;
 
     public Creature() {
     }
 
-    public Creature(int positionX, int positiony) {
+    public Creature(int id, int positionX, int positiony) {
+        this.id = id;
         this.positionX = positionX;
         this.positionY = positiony;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getPositionX() {

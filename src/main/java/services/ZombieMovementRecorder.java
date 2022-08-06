@@ -9,13 +9,14 @@ public class ZombieMovementRecorder {
         int[][] matrix = grid.getMatrix();
 
         if(matrix[zombie.getPositionX()][zombie.getPositionY()] == 1){
-            System.out.format("zombie %d infected creature at (%d, %d)", 0, zombie.getPositionX(), zombie.getPositionY());
+            System.out.format("zombie %d infected creature at (%d, %d)\r\n", zombie.getId(), zombie.getPositionX(), zombie.getPositionY());
         }
     }
 
-    public void recordCreature(Grid grid, Creature creature){
+    public Grid recordCreature(Grid grid, Creature creature){
         int[][] matrix = grid.getMatrix();
         matrix[creature.getPositionX()][creature.getPositionY()] = 1;
         grid.setMatrix(matrix);
+        return grid;
     }
 }

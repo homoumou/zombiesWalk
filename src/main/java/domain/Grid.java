@@ -29,14 +29,4 @@ public class Grid {
         this.matrix = matrix;
     }
 
-    public void recordZombieMovement(int positionX, int positionY){
-         if(matrix[positionX][positionY] == 1){
-             System.out.format("zombie %d infected creature at (%d, %d)", 0, positionX, positionY);
-         }
-    }
-
-    public void recordCreature(int positionX, int positionY){
-        this.matrix[positionX][positionY] = 1;
-    }
-
 }
